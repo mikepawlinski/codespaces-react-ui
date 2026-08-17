@@ -1,35 +1,34 @@
 # Zadanie w parze — Zbuduj komponent karty „Speaker"
 
 **Czas:** ~45 min, w parze. Ty prowadzisz; rozmawiamy na bieżąco.
+
 **Stack:** React + TypeScript, czysty CSS (bez bibliotek komponentów — chcemy zobaczyć Twoje własne instynkty co do layoutu i stylowania). Korzystaj ze zmiennych CSS, które Ci dajemy.
+
 **Dane:** dostarcza je mały, lokalny hook **TanStack Query**, `useSpeakers()` (w `src/hooks/useSpeakers.ts`), który pobiera `public/speakers.json` — bez prawdziwego backendu. Użyj hooka i obsłuż jego stany `isLoading` / `isError`. Hook ma sztuczne opóźnienie, a aplikacja ma checkbox „Simulate error" (podpięty pod query key hooka), żebyś mógł/mogła wywołać stany Loading i Error. Dane są otypowane jako `Speaker` w `src/types.ts`.
 
 To normalny kawałek pracy nad UI: designer przekazał Ci specyfikację, a Ty zamieniasz ją w prawdziwy, solidny komponent. Myśl na głos, pytaj o wszystko, traktuj nas jak członków zespołu, z którymi programujesz w parze.
 
-**Korzystaj z AI tak, jak zwykle** — Copilot, Cursor, Claude, ChatGPT, cokolwiek masz w swoim workflow. Nie sprawdzamy, czy umiesz pisać Reacta z pamięci; sprawdzamy Twój osąd.
+## Co robimy?
 
-## Co zbudować
+**Komponent karty** (`Card`), który wyświetla prelegenta (z `public/speakers.json`), wraz ze stanami, których wymaga prawdziwa karta. Wyrenderuj kilka takich kart w prostym gridzie.
 
-**Komponent karty**, który wyświetla prelegenta (z `public/speakers.json`), wraz ze stanami, których wymaga prawdziwa karta. Wyrenderuj kilka takich kart w prostym gridzie.
-
-### Karta powinna pokazywać
+### Co na karcie?
 
 - Awatar (inicjały w kolorowym kółku, wygenerowane z imienia i nazwiska), imię i nazwisko, stanowisko
 - Krótką etykietę tracku (np. „Engineering", „Business", „Marketing")
 - Kilka dodatkowych informacji (temat prelekcji, słowa kluczowe)
 - Główny przycisk akcji („View profile") i akcję drugorzędną
 
-### Stany, które chcemy zobaczyć (to jest właściwy test)
+### Stany, które chcemy zobaczyć
 
-- **Domyślny / spoczynkowy**
+- **Domyślny**
 - **Hover** oraz **focus z klawiatury** (karta jest interaktywna)
-- **Loading** (zanim dane się załadują — skeleton lub coś w tym stylu)
-- **Empty** (co, gdy nie ma żadnych prelegentów?)
-- **Error / brakujące dane** (np. prelegent z brakującym polem, typu jeszcze nieustalony temat)
+- **Loading state listy**
+- **Error / brakujące dane**
 
 ### Design system
 
-To nasz design system, już gotowy w **`src/index.css`** (prymitywy + tokeny semantyczne: kolory, odstępy, zaokrąglenia, typografia, cienie). **Korzystaj z tych tokenów zamiast hardkodować wartości** — poprawne ich użycie jest częścią oceny. Zajrzyj do `src/index.css`, żeby zobaczyć pełną listę, albo wejdź w zakładkę **Design System** w uruchomionej aplikacji, żeby zobaczyć je wyrenderowane.
+Design System (wymyślony) już gotowy w **`src/index.css`** (prymitywy + tokeny semantyczne: kolory, odstępy, itd).
 
 ## Specyfikacja projektowa (design spec)
 
