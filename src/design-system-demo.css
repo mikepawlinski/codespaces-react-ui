@@ -1,0 +1,155 @@
+/*
+  Helper classes for the Design System preview page only
+  (src/pages/DesignSystemPage.tsx). These are NOT part of the candidate's task
+  surface — the card exercise builds against the raw tokens in index.css.
+*/
+
+.ds-page {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: var(--space-6) var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.ds-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.ds-section__title {
+  margin: 0;
+  font-size: var(--text-xl);
+  line-height: var(--leading-tight);
+}
+
+.ds-section__hint {
+  margin: 0;
+  font-size: var(--text-sm);
+  color: var(--muted-foreground);
+}
+
+/* Generic flex row for chips / boxes */
+.ds-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-5);
+  align-items: flex-end;
+}
+
+/* A labelled tile: the demo box on top, its token name below */
+.ds-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--muted-foreground);
+}
+
+/* --- Color swatches --- */
+.ds-swatches {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: var(--space-3);
+}
+
+.ds-swatch {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--background);
+}
+
+.ds-swatch__chip {
+  height: 48px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+}
+
+.ds-swatch__name {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--foreground);
+}
+
+.ds-swatch__value {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--subtle-foreground);
+}
+
+/* --- Buttons --- */
+.ds-btn {
+  font-family: inherit;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  padding: var(--space-2) var(--space-4);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background 120ms ease, color 120ms ease;
+}
+
+.ds-btn--primary {
+  background: var(--primary);
+  color: var(--primary-foreground);
+}
+.ds-btn--primary:hover {
+  background: var(--primary-hover);
+}
+
+.ds-btn--secondary {
+  background: transparent;
+  color: var(--primary);
+  padding-left: var(--space-2);
+  padding-right: var(--space-2);
+}
+.ds-btn--secondary:hover {
+  color: var(--primary-hover);
+}
+
+.ds-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* --- Grey demo boxes (spacing / radius / elevation) --- */
+.ds-box {
+  background: var(--border-strong);
+  border-radius: var(--radius-sm);
+}
+
+.ds-radius-box {
+  width: 72px;
+  height: 72px;
+  background: var(--border-strong);
+}
+
+.ds-elevation-box {
+  width: 104px;
+  height: 72px;
+  background: var(--muted);
+  border-radius: var(--radius-md);
+}
+
+/* --- Typography --- */
+.ds-type-row {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-4);
+}
+
+.ds-type-row__label {
+  flex-shrink: 0;
+  width: 132px;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--subtle-foreground);
+}

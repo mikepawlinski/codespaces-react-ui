@@ -1,0 +1,8 @@
+[
+  { "id": 1, "name": "Amara Okafor", "role": "Senior Frontend Engineer", "track": "Engineering", "topic": "Scaling Design Systems Across Teams", "keywords": ["JavaScript", "TypeScript", "React", "CSS"], "featured": true },
+  { "id": 2, "name": "Tomasz Wiśniewski", "role": "UI Engineer", "track": "Engineering", "topic": "Building Accessible UI Components", "keywords": ["JavaScript", "HTML", "CSS", "jQuery"], "featured": false },
+  { "id": 3, "name": "Priya Nair", "role": "Design Systems Engineer", "track": "Marketing", "topic": "Design Tokens as a Brand Language", "keywords": ["TypeScript", "React", "CSS", "HTML"], "featured": false },
+  { "id": 4, "name": "Jonas Berg", "role": "Frontend Developer", "track": "Business", "topic": "Shipping Faster with Less Code", "keywords": ["JavaScript", "jQuery", "HTML", "CSS"], "featured": false },
+  { "id": 5, "name": "Yuki Tanaka", "role": "Product Engineer", "track": "Business", "topic": "", "keywords": ["TypeScript", "React", "Python", "JavaScript"], "featured": true },
+  { "id": 6, "name": "María José Fernández-Castro", "role": "Principal Design Systems Architect", "track": "Marketing", "topic": "Building a Brand-Consistent Component Library Across Twelve Product Teams and Three Continents", "keywords": ["Design Systems", "TypeScript", "React", "CSS", "HTML", "Figma", "Accessibility", "Branding", "Documentation", "Tokens"], "featured": false }
+]

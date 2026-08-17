@@ -1,0 +1,149 @@
+:root {
+  /* ---------------------------------------------------------------------------
+     PRIMITIVES — the raw palette. Named by hue + shade, no meaning attached.
+     Don't reference these directly in components; use the semantic tokens below.
+     --------------------------------------------------------------------------- */
+  --white: #ffffff;
+
+  --slate-50: #f8fafc;
+  --slate-100: #f1f5f9;
+  --slate-200: #e2e8f0;
+  --slate-300: #cbd5e1;
+  --slate-400: #94a3b8;
+  --slate-500: #64748b;
+  --slate-900: #0f172a;
+
+  --indigo-50: #eef2ff;
+  --indigo-600: #4f46e5;
+  --indigo-700: #4338ca;
+
+  --red-600: #dc2626;
+
+  /* ---------------------------------------------------------------------------
+     SEMANTIC TOKENS — what things mean (shadcn-style background / foreground).
+     Use THESE in components; they point at the primitives above, so re-theming
+     is a one-line swap here.
+     --------------------------------------------------------------------------- */
+
+  /* Base */
+  --background: var(--white);
+  --foreground: var(--slate-900);
+
+  /* Surfaces */
+  --card: var(--slate-50);
+  --muted: var(--slate-100);
+  --muted-foreground: var(--slate-500);
+  --subtle-foreground: var(--slate-400);
+
+  /* Borders */
+  --border: var(--slate-200);
+  --border-strong: var(--slate-300);
+
+  /* Brand */
+  --primary: var(--indigo-600);
+  --primary-hover: var(--indigo-700);
+  --primary-foreground: var(--white);
+  --accent: var(--indigo-50);
+
+  /* Feedback */
+  --destructive: var(--red-600);
+  --destructive-foreground: var(--white);
+
+  /* Spacing scale (4px base) */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-8: 48px;
+
+  /* Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-full: 9999px;
+
+  /* Typography */
+  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", Menlo, monospace;
+  --text-xs: 12px;
+  --text-sm: 14px;
+  --text-base: 16px;
+  --text-lg: 18px;
+  --text-xl: 24px;
+  --leading-tight: 1.25;
+  --leading-normal: 1.5;
+
+  /* Elevation */
+  --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.06);
+  --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.08);
+}
+
+/* Bare global resets — nothing card-specific. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+  background: var(--background);
+  color: var(--foreground);
+}
+
+/* Top navigation (app chrome). */
+.nav {
+  border-bottom: 1px solid var(--border);
+  background: var(--background);
+}
+
+.nav__inner {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: var(--space-3) var(--space-4);
+  display: flex;
+  gap: var(--space-2);
+}
+
+.nav__link {
+  font-family: inherit;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--muted-foreground);
+  background: transparent;
+  border: none;
+  border-radius: var(--radius-md);
+  padding: var(--space-2) var(--space-3);
+  cursor: pointer;
+}
+
+.nav__link:hover {
+  background: var(--muted);
+  color: var(--foreground);
+}
+
+.nav__link[aria-current='page'] {
+  color: var(--primary);
+  background: var(--accent);
+}
+
+/* Page shell only — the candidate owns the card and grid item styling. */
+.page {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: var(--space-6) var(--space-4);
+}
+
+.page__subtitle {
+  color: var(--muted-foreground);
+}
+
+.page__grid {
+  display: grid;
+  gap: var(--space-4);
+}
