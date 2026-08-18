@@ -11,7 +11,6 @@ const PRIMITIVE_TOKENS: Token[] = [
   { name: '--slate-200', value: '#e2e8f0' },
   { name: '--slate-300', value: '#cbd5e1' },
   { name: '--slate-400', value: '#94a3b8' },
-  { name: '--slate-450', value: '#7c8ba1' },
   { name: '--slate-500', value: '#64748b' },
   { name: '--slate-900', value: '#0f172a' },
   { name: '--indigo-50', value: '#eef2ff' },
@@ -27,7 +26,7 @@ const SEMANTIC_TOKENS: SemanticToken[] = [
   { name: '--card', ref: '--slate-50' },
   { name: '--muted', ref: '--slate-100' },
   { name: '--muted-foreground', ref: '--slate-500' },
-  { name: '--subtle-foreground', ref: '--slate-450' },
+  { name: '--subtle-foreground', ref: '--slate-500' },
   { name: '--border', ref: '--slate-200' },
   { name: '--border-strong', ref: '--slate-300' },
   { name: '--primary', ref: '--indigo-600' },
@@ -49,7 +48,7 @@ const TEXT_SIZES: Token[] = [
 const TEXT_COLORS: Token[] = [
   { name: '--foreground', value: '#0f172a' },
   { name: '--muted-foreground', value: '#64748b' },
-  { name: '--subtle-foreground', value: '#7c8ba1' },
+  { name: '--subtle-foreground', value: '#64748b' },
 ]
 
 const SPACING: Token[] = [

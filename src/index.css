@@ -10,7 +10,6 @@
   --slate-200: #e2e8f0;
   --slate-300: #cbd5e1;
   --slate-400: #94a3b8;
-  --slate-450: #7c8ba1;
   --slate-500: #64748b;
   --slate-900: #0f172a;
 
@@ -34,7 +33,7 @@
   --card: var(--slate-50);
   --muted: var(--slate-100);
   --muted-foreground: var(--slate-500);
-  --subtle-foreground: var(--slate-450);
+  --subtle-foreground: var(--slate-500);
 
   /* Borders */
   --border: var(--slate-200);
